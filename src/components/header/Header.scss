@@ -1,0 +1,75 @@
+$font-stack-1: "Barlow Condensed", sans-serif;
+$font-stack-2: "Bellefair", serif;
+$font-color-primary: #d0d6f9;
+$font-color-secondary: #0b0d17;
+
+.header__ {
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 48px;
+  position: relative;
+
+  &logo {
+    height: 40px;
+  }
+
+  &menu-close {
+    display: flex;
+    height: 20px;
+    margin-left: auto;
+    margin-bottom: 65px;
+  }
+
+  nav {
+    position: absolute;
+    top: -24px;
+    color: #fff;
+    width: 254px;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(40.7742px);
+    padding: 32px;
+    transition: ease-in 0.6s;
+  }
+
+  .open {
+    right: -24px;
+  }
+
+  .closed {
+    right: -300px;
+  }
+
+  &navbar {
+    list-style: none;
+    font-family: $font-stack-1;
+    font-size: 16px;
+    letter-spacing: 3px;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding-left: 0;
+
+    &-links span {
+      font-weight: bolder;
+    }
+
+    &-links {
+      position: relative;
+      margin-bottom: 32px;
+    }
+
+    .active::after {
+      content: "";
+      position: absolute;
+      right: -32px;
+      top: 0;
+      display: flex;
+      width: 4px;
+      height: 31px;
+      background-color: #fff;
+    }
+  }
+}

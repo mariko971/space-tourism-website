@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap");
+
+$font-stack-1: "Barlow Condensed", sans-serif;
+$font-stack-2: "Bellefair", serif;
+$font-color-primary: #d0d6f9;
+$font-color-secondary: #0b0d17;
+
+.home {
+  display: flex;
+  flex-direction: column;
+  background: no-repeat;
+  place-items: center;
+  color: #fff;
+
+  &__title {
+    font-family: $font-stack-1;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 2.7px;
+    color: $font-color-primary;
+    margin-bottom: 16px;
+  }
+
+  &__title-2 {
+    font-family: $font-stack-2;
+    font-size: 80px;
+    line-height: 100px;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  &__text {
+    font-family: $font-stack-1;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    color: $font-color-primary;
+    margin-bottom: 81px;
+    text-align: center;
+    letter-spacing: 1.2px;
+    font-style: normal;
+  }
+
+  &__btn {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #fff;
+    text-align: center;
+    font-style: normal;
+    color: $font-color-secondary;
+    font-size: 20px;
+    line-height: 22.92px;
+    letter-spacing: 1.25px;
+    font-family: $font-stack-2;
+    font-weight: 400;
+    text-transform: uppercase;
+    border-style: none;
+    outline: none;
+  }
+}
