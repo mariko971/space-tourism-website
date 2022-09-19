@@ -1,10 +1,13 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 import "./Header.scss";
 
 const Header = () => {
   const [toggle, setToggle] = useState("closed");
-  console.log(window.innerWidth);
+  const onClickLink = () => {
+    setToggle("closed");
+  };
   return (
     <header className="header__">
       <img src="/assets/shared/logo.svg" alt="logo" className="header__logo" />
@@ -16,17 +19,25 @@ const Header = () => {
           onClick={() => setToggle("closed")}
         />
         <ul className="header__navbar">
-          <li className="header__navbar-links active">
-            <span>00&nbsp;</span> Home
+          <li className="header__navbar-links active" onClick={onClickLink}>
+            <Link to="/">
+              <span>00&nbsp;</span> Home
+            </Link>
           </li>
-          <li className="header__navbar-links">
-            <span>01&nbsp;</span> Destination
+          <li className="header__navbar-links" onClick={onClickLink}>
+            <Link to="/destination">
+              <span>01&nbsp;</span> Destination
+            </Link>
           </li>
-          <li className="header__navbar-links">
-            <span>02&nbsp;</span> Crew
+          <li className="header__navbar-links" onClick={onClickLink}>
+            <Link to="/crew">
+              <span>02&nbsp;</span> Crew
+            </Link>
           </li>
-          <li className="header__navbar-links">
-            <span>03&nbsp;</span> Technology
+          <li className="header__navbar-links" onClick={onClickLink}>
+            <Link to="/technology">
+              <span>03&nbsp;</span> Technology
+            </Link>
           </li>
         </ul>
       </nav>
