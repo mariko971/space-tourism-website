@@ -1,5 +1,6 @@
 $font-stack-1: "Barlow Condensed", sans-serif;
 $font-stack-2: "Bellefair", serif;
+$font-stack-3: "Barlow", sans-serif;
 $font-color-primary: #d0d6f9;
 $font-color-secondary: #0b0d17;
 $separator-color: #383b4b;
@@ -9,7 +10,7 @@ $white-color: #fff;
   color: #fff;
   text-align: center;
 
-  h3 {
+  &__title {
     font-family: $font-stack-1;
     font-size: 16px;
     font-weight: 400;
@@ -17,13 +18,17 @@ $white-color: #fff;
     letter-spacing: 2.7px;
     text-transform: uppercase;
     margin-bottom: 32px;
+
+    span {
+      opacity: 0.25;
+    }
   }
-  img {
+  &__img {
     height: 170px;
     margin-bottom: 26px;
   }
 
-  ul {
+  &__nav {
     display: flex;
     list-style: none;
     justify-content: space-between;
@@ -37,34 +42,35 @@ $white-color: #fff;
     margin: 0 auto 31px auto;
     padding: 0;
 
-    li {
+    &-link {
       padding-bottom: 8px;
     }
 
-    li:focus {
+    &-link:focus {
       color: #fff;
       border-bottom: solid 3px #fff;
     }
   }
 
-  h1 {
+  &__h1 {
     font-family: $font-stack-2;
     font-weight: 400;
     font-size: 56px;
     line-height: 64px;
   }
 
-  p {
-    font-family: $font-stack-1;
+  &__text {
+    font-family: $font-stack-3;
     font-weight: 400;
     font-size: 15px;
     line-height: 25px;
-    letter-spacing: 1.2px;
+    // letter-spacing: 1.2px;
     padding-bottom: 32px;
     border-bottom: solid 1px $separator-color;
+    color: $font-color-primary;
   }
 
-  div {
+  &__info {
     margin-top: 32px;
     h4 {
       font-family: $font-stack-1;

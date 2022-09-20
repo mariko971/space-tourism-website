@@ -9,7 +9,7 @@ $font-color-secondary: #0b0d17;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin-bottom: 48px;
+  margin-bottom: 24px;
   position: relative;
 
   &logo {
@@ -33,6 +33,7 @@ $font-color-secondary: #0b0d17;
     backdrop-filter: blur(40.7742px);
     padding: 32px;
     transition: ease-in 0.6s;
+    z-index: 2;
   }
 
   .open {
@@ -53,7 +54,7 @@ $font-color-secondary: #0b0d17;
     padding-left: 0;
 
     &-links span {
-      font-weight: bolder;
+      font-weight: 700;
     }
 
     &-links {

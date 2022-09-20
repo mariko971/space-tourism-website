@@ -1,5 +1,6 @@
-import React, { useContext, useState, useRef, useEffect } from "react";
+import React, { useContext, useState, useRef, useLayoutEffect } from "react";
 import { appContext } from "../App";
+import { activeLink, inActiveLink } from "../../utils";
 
 import "./destination.scss";
 
@@ -21,27 +22,12 @@ const Destination = () => {
     Titan: titanRef,
   };
 
-  const active = (ref) => {
-    ref.current.style.borderBottomColor = "#fff";
-    ref.current.style.color = "#fff";
-    ref.current.style.borderBottomWidth = "3px";
-    ref.current.style.borderBottomStyle = "solid";
-  };
-
-  const deactivate = (ref) => {
-    ref.current.style.borderBottomColor = "none";
-    ref.current.style.color = "inherit";
-    ref.current.style.borderBottomWidth = "3px";
-    ref.current.style.borderBottomStyle = "none";
-  };
-
-  useEffect(() => {
-    console.log(name);
-    active(refs[name]);
+  useLayoutEffect(() => {
+    activeLink(refs[name]);
   }, [name]);
 
   const handleClick = (i) => {
-    deactivate(refs[name]);
+    inActiveLink(refs[name]);
     setDestination(i);
   };
 
@@ -53,14 +39,14 @@ const Destination = () => {
       <img src={images.png} alt="moon" className="destination__img" />
       <ul className="destination__nav">
         <li
-          className="destination__nav-link moon"
+          className="destination__nav-link"
           onClick={() => handleClick(0)}
           ref={moonRef}
         >
           MOON
         </li>
         <li
-          className="destination__nav-link mars"
+          className="destination__nav-link"
           onClick={() => handleClick(1)}
           ref={marsRef}
         >

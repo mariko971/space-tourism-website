@@ -1,13 +1,32 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useLayoutEffect } from "react";
 import { Link } from "react-router-dom";
 
 import "./Header.scss";
 
-const Header = () => {
+const Header = ({ setImgUrl }) => {
   const [toggle, setToggle] = useState("closed");
-  const onClickLink = () => {
+
+  const homeRef = useRef();
+  const destRef = useRef();
+  const crewRef = useRef();
+  const techRef = useRef();
+
+  const [ref, setRef] = useState(homeRef);
+
+  let currRef = ref;
+
+  // closes the side menu and sets the background image relative to the page url
+  const onClickLink = (url, ref) => {
+    currRef.current.classList.remove("active");
     setToggle("closed");
+    setRef(ref);
+    setImgUrl(url);
   };
+
+  useLayoutEffect(() => {
+    ref.current.classList.add("active");
+  }, [ref]);
+
   return (
     <header className="header__">
       <img src="/assets/shared/logo.svg" alt="logo" className="header__logo" />
@@ -19,22 +38,38 @@ const Header = () => {
           onClick={() => setToggle("closed")}
         />
         <ul className="header__navbar">
-          <li className="header__navbar-links active" onClick={onClickLink}>
+          <li
+            className="header__navbar-links"
+            onClick={() => onClickLink("home", homeRef)}
+            ref={homeRef}
+          >
             <Link to="/">
               <span>00&nbsp;</span> Home
             </Link>
           </li>
-          <li className="header__navbar-links" onClick={onClickLink}>
+          <li
+            className="header__navbar-links"
+            onClick={() => onClickLink("destination", destRef)}
+            ref={destRef}
+          >
             <Link to="/destination">
               <span>01&nbsp;</span> Destination
             </Link>
           </li>
-          <li className="header__navbar-links" onClick={onClickLink}>
+          <li
+            className="header__navbar-links"
+            onClick={() => onClickLink("crew", crewRef)}
+            ref={crewRef}
+          >
             <Link to="/crew">
               <span>02&nbsp;</span> Crew
             </Link>
           </li>
-          <li className="header__navbar-links" onClick={onClickLink}>
+          <li
+            className="header__navbar-links"
+            onClick={() => onClickLink("technology", techRef)}
+            ref={techRef}
+          >
             <Link to="/technology">
               <span>03&nbsp;</span> Technology
             </Link>
