@@ -1,0 +1,42 @@
+@import "../scss/breakpoints.scss";
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+img {
+  height: 100%;
+}
+
+.app-container {
+  padding: 24px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  overflow: hidden;
+  isolation: isolate;
+  position: relative;
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+  }
+}

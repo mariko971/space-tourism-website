@@ -6,25 +6,30 @@ import Home from "../components/home/Home";
 import Destination from "./destination/Destination";
 import Crew from "./crew/crew";
 import Technology from "./technology/technology";
-import { backgrounds } from "../backgrounds";
+import { pagesBg } from "../backgrounds";
 import Header from "./header/Header";
 
-import "./App.css";
+import "./App.scss";
 
 export const appContext = createContext(data);
 
 const App = () => {
   const [imgUrl, setImgUrl] = useState("home");
-  const { mobile, tablet, desktop } = backgrounds;
+  const { desktop, mobile, tablet } = pagesBg[imgUrl];
 
   return (
     <appContext.Provider value={data}>
-      <div
-        className="app-container"
-        style={{
-          backgroundImage: mobile[imgUrl],
-        }}
-      >
+      <div className="app-container">
+        <picture>
+          <source srcSet={desktop} media="(min-width: 769px)" />
+          <source srcSet={tablet} media="(min-width: 376px)" />
+          {/* <source srcSet={mobile}  /> */}
+          <img
+            src={pagesBg.destination.mobile}
+            alt="background"
+            className="app-container__img"
+          />
+        </picture>
         <Header setImgUrl={setImgUrl} />
         <Routes>
           <Route path="/" element={<Home />} />

@@ -1,20 +1,22 @@
-export const backgrounds = {
-  mobile: {
-    home: "url(/assets/home/background-home-mobile.jpg)",
-    destination: "url(/assets/destination/background-destination-mobile.jpg)",
-    crew: "url(/assets/crew/background-crew-mobile.jpg)",
-    technology: "url(/assets/technology/background-technology-mobile.jpg)",
+export const pagesBg = {
+  home: {
+    desktop: "/assets/home/background-home-desktop.jpg",
+    tablet: "/assets/home/background-home-tablet.jpg",
+    mobile: "/assets/home/background-home-mobile.jpg",
   },
-  tablet: {
-    home: "url(/assets/home/background-home-tablet.jpg)",
-    destination: "url(/assets/destination/background-destination-tablet.jpg)",
-    crew: "url(/assets/crew/background-crew-tablet.jpg)",
-    technology: "url(/assets/technology/background-technology-tablet.jpg)",
+  destination: {
+    desktop: "/assets/destination/background-destination-desktop.jpg",
+    tablet: "/assets/destination/background-destination-tablet.jpg",
+    mobile: "/assets/destination/background-destination-mobile.jpg",
   },
-  desktop: {
-    home: "url(/assets/home/background-home-desktop.jpg)",
-    destination: "url(/assets/destination/background-destination-desktop.jpg)",
-    crew: "url(/assets/crew/background-crew-desktop.jpg)",
-    technology: "url(/assets/technology/background-technology-desktop.jpg)",
+  crew: {
+    desktop: "/assets/crew/background-crew-desktop.jpg",
+    tablet: "/assets/crew/background-crew-tablet.jpg",
+    mobile: "/assets/crew/background-crew-mobile.jpg",
+  },
+  technology: {
+    desktop: "/assets/technology/background-technology-desktop.jpg",
+    tablet: "/assets/technology/background-technology-tablet.jpg",
+    mobile: "/assets/technology/background-technology-mobile.jpg",
   },
 };
