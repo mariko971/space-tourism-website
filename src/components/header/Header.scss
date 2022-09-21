@@ -1,7 +1,5 @@
-$font-stack-1: "Barlow Condensed", sans-serif;
-$font-stack-2: "Bellefair", serif;
-$font-color-primary: #d0d6f9;
-$font-color-secondary: #0b0d17;
+@import "../../scss/variable.scss";
+@import "../../scss/breakpoints.scss";
 
 .header__ {
   background-color: transparent;
@@ -12,16 +10,56 @@ $font-color-secondary: #0b0d17;
   margin-bottom: 24px;
   position: relative;
 
+  @include sm {
+    font-size: 18px;
+  }
+
+  @include md {
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 3.375px;
+    padding-left: 15px;
+    top: -24px;
+    margin-bottom: 0;
+  }
+
+  @include xl {
+    margin-top: 40px;
+    padding-left: 31px;
+  }
+
+  //  ----BURGER ICON--------
+
+  &menu {
+    @include md {
+      display: none;
+    }
+  }
+
+  //  ----COMPANY LOGO--------
+
   &logo {
     height: 40px;
+
+    @include md {
+      height: 48px;
+    }
   }
+
+  //  ----CLOSE ICON--------
 
   &menu-close {
     display: flex;
     height: 20px;
     margin-left: auto;
     margin-bottom: 65px;
+
+    @include md {
+      display: none;
+    }
   }
+
+  //  ----NAVIGATION--------
 
   nav {
     position: absolute;
@@ -34,6 +72,19 @@ $font-color-secondary: #0b0d17;
     padding: 32px;
     transition: ease-in 0.6s;
     z-index: 2;
+
+    @include md {
+      position: inherit;
+      height: 96px;
+      width: 450px;
+      top: 0;
+      padding: 39px 48px 39px 48px;
+    }
+
+    @include xl {
+      width: 830px;
+      padding: 39px 123px 39px 165px;
+    }
   }
 
   .open {
@@ -42,6 +93,10 @@ $font-color-secondary: #0b0d17;
 
   .closed {
     right: -300px;
+
+    @include md {
+      right: -24px;
+    }
   }
 
   &navbar {
@@ -53,8 +108,24 @@ $font-color-secondary: #0b0d17;
     text-transform: uppercase;
     padding-left: 0;
 
+    @include md {
+      display: flex;
+      font-size: 14px;
+      line-height: 17px;
+      letter-spacing: 2.3625px;
+      justify-content: space-around;
+      margin: 0;
+    }
+
     &-links span {
       font-weight: 700;
+
+      @include md {
+        display: none;
+      }
+      @include xl {
+        display: block;
+      }
     }
 
     &-links {
@@ -64,6 +135,13 @@ $font-color-secondary: #0b0d17;
       & a {
         text-decoration: none;
         color: #fff;
+
+        @include xl {
+          display: flex;
+          font-size: 16px;
+          line-height: 19px;
+          letter-spacing: 2.7px;
+        }
       }
     }
 
@@ -76,6 +154,13 @@ $font-color-secondary: #0b0d17;
       width: 4px;
       height: 31px;
       background-color: #fff;
+
+      @include md {
+        height: 2px;
+        width: 100%;
+        right: 0;
+        top: 54.6px;
+      }
     }
   }
 }

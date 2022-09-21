@@ -1,10 +1,4 @@
-$font-stack-1: "Barlow Condensed", sans-serif;
-$font-stack-2: "Bellefair", serif;
-$font-stack-3: "Barlow", sans-serif;
-$font-color-primary: #d0d6f9;
-$font-color-secondary: #0b0d17;
-$separator-color: #383b4b;
-$white-color: #fff;
+@import "../../scss/variable.scss";
 
 .destination {
   color: #fff;
