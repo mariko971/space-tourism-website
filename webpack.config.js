@@ -7,6 +7,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, "/dist"),
     filename: "bundle.js",
+    assetModuleFilename: "images/[hash][ext]",
   },
 
   plugins: [
@@ -28,8 +29,12 @@ module.exports = {
         },
       },
       {
-        test: /.css$|.sass|.scss/,
+        test: /\.(s(a|c)ss)$/,
         use: ["style-loader", "css-loader", "sass-loader"],
+      },
+      {
+        test: /\.(png|jpeg|jpg|webp)$/,
+        type: "asset/resource",
       },
     ],
   },
