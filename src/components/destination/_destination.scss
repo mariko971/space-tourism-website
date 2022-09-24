@@ -1,0 +1,191 @@
+@import "../../scss/variable.scss";
+@import "../../scss/breakpoints.scss";
+
+.destination {
+  color: #fff;
+  text-align: center;
+
+  @include xl {
+    aside {
+      display: flex;
+      margin-bottom: 112px;
+    }
+    &__wrapper {
+      width: 445px;
+      height: 472px;
+    }
+  }
+
+  &__title {
+    font-family: $font-stack-1;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 2.7px;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+
+    @include md {
+      font-size: 20px;
+      line-height: 24px;
+      letter-spacing: 3.375px;
+      text-align: left;
+      margin: 16px 0 60px 0;
+      padding-left: 14.5px;
+    }
+
+    @include xl {
+      font-size: 28px;
+      line-height: 34px;
+      letter-spacing: 4.725px;
+      padding-left: 142.5px;
+      margin-bottom: 97px;
+    }
+
+    span {
+      opacity: 0.25;
+    }
+  }
+  &__img {
+    height: 170px;
+    margin-bottom: 26px;
+    filter: drop-shadow(0 0 0.45rem rgba(194, 193, 193, 0.188));
+
+    @include md {
+      height: 300px;
+      margin-bottom: 53px;
+    }
+
+    @include xl {
+      height: 445px;
+      margin-inline: 206px 157px;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    font-family: "Barlow Condensed";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 2.3625px;
+    color: $font-color-primary;
+    width: 234px;
+    margin: 0 auto 31px auto;
+    padding: 0;
+
+    @include md {
+      font-size: 16px;
+      line-height: 19px;
+      letter-spacing: 2.7px;
+      width: 281.5px;
+    }
+
+    @include xl {
+      width: 285.5px;
+      margin-inline: 0;
+      margin-bottom: 37px;
+    }
+
+    &-link {
+      padding-bottom: 8px;
+
+      @include xl {
+        padding-bottom: 12px;
+      }
+    }
+
+    &-link:focus {
+      color: #fff;
+      border-bottom: solid 3px #fff;
+    }
+  }
+
+  &__h1 {
+    font-family: $font-stack-2;
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 64px;
+
+    @include md {
+      font-size: 80px;
+      line-height: 92px;
+    }
+
+    @include xl {
+      font-size: 100px;
+      line-height: 115px;
+      text-align: left;
+    }
+  }
+
+  &__text {
+    font-family: $font-stack-3;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    padding-bottom: 32px;
+    border-bottom: solid 1px $separator-color;
+    color: $font-color-primary;
+    margin-inline: auto;
+
+    @include sm {
+      max-width: 573px;
+    }
+
+    @include md {
+      font-size: 16px;
+      line-height: 28px;
+    }
+
+    @include xl {
+      font-size: 18px;
+      line-height: 32px;
+      text-align: left;
+      padding-bottom: 54px;
+    }
+  }
+
+  &__info {
+    margin-top: 32px;
+
+    h4 {
+      font-family: $font-stack-1;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+      letter-spacing: 2.3625px;
+      text-transform: uppercase;
+      color: $font-color-primary;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-family: $font-stack-2;
+      font-weight: 400;
+      font-size: 28px;
+      line-height: 32px;
+      color: #fff;
+      text-transform: uppercase;
+      margin-bottom: 32px;
+    }
+
+    @include md {
+      display: flex;
+      width: 573px;
+      margin-inline: auto;
+      justify-content: space-around;
+    }
+    @include xl {
+      width: 445px;
+      justify-content: initial;
+      text-align: left;
+
+      &-article {
+        margin-inline: 0 auto;
+      }
+    }
+  }
+}

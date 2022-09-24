@@ -1,0 +1,186 @@
+@import "../../scss/variable.scss";
+@import "../../scss/breakpoints.scss";
+
+.technology {
+  color: #fff;
+  text-align: center;
+
+  @include xl {
+    margin-bottom: 214px;
+    &__article {
+      display: flex;
+
+      article {
+        width: 470px;
+      }
+    }
+  }
+
+  &__title {
+    font-family: $font-stack-1;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 2.7px;
+    text-transform: uppercase;
+    margin-bottom: 236px;
+
+    @include md {
+      font-size: 20px;
+      line-height: 24px;
+      letter-spacing: 3.375px;
+      text-align: left;
+      margin: 16px 0 426px 0;
+      padding-left: 14.5px;
+    }
+
+    @include xl {
+      font-size: 28px;
+      line-height: 34px;
+      letter-spacing: 4.725px;
+      padding-left: 142.5px;
+      margin-bottom: 137px;
+    }
+
+    span {
+      opacity: 0.25;
+    }
+  }
+  &__img {
+    height: 170px;
+    width: 100vw;
+    margin-bottom: 34px;
+    position: absolute;
+    left: 0;
+    top: 139px;
+    z-index: -1;
+
+    @include md {
+      height: 310px;
+      top: 220px;
+    }
+
+    @include xl {
+      width: 515px;
+      height: 527px;
+      left: 925px;
+      top: 272px;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    font-family: "Barlow Condensed";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 1px;
+    color: $font-color-primary;
+    width: 152px;
+    height: 40px;
+    margin: 0 auto 26px auto;
+    padding: 0;
+
+    @include md {
+      width: 210px;
+      height: 60px;
+      font-size: 24px;
+      line-height: 28px;
+      letter-spacing: 1.5px;
+      text-align: center;
+      margin-bottom: 44px;
+    }
+
+    @include xl {
+      flex-direction: column;
+      height: 304px;
+      width: 80px;
+      margin: 0 80px 0 141px;
+    }
+
+    &-link {
+      display: flex;
+      border-radius: 50%;
+      width: 40px;
+      border: 1px solid rgb(255, 255, 255, 0.25);
+      align-items: center;
+      justify-content: center;
+      font-family: $font-stack-2;
+
+      @include md {
+        width: 60px;
+      }
+      @include xl {
+        width: 80px;
+        height: 80px;
+      }
+    }
+  }
+
+  &__role {
+    font-family: $font-stack-1;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 2.3625px;
+    margin-bottom: 9px;
+    color: $font-color-primary;
+
+    @include md {
+      font-size: 16px;
+      line-height: 19px;
+      letter-spacing: 2.7px;
+      margin-bottom: 16px;
+    }
+
+    @include xl {
+      text-align: left;
+    }
+  }
+
+  &__name {
+    font-family: $font-stack-2;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 16px;
+
+    @include md {
+      font-size: 40px;
+      line-height: 46px;
+    }
+    @include xl {
+      font-size: 56px;
+      line-height: 64px;
+      text-align: left;
+    }
+  }
+
+  &__text {
+    font-family: $font-stack-3;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    padding-bottom: 32px;
+    color: $font-color-primary;
+
+    @include sm {
+      max-width: 458px;
+      margin-inline: auto;
+    }
+
+    @include md {
+      font-size: 16px;
+      line-height: 28px;
+    }
+    @include xl {
+      text-align: left;
+      max-width: 444px;
+      margin-inline: 0;
+      font-size: 18px;
+      line-height: 32px;
+    }
+  }
+}

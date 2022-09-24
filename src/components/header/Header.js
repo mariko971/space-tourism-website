@@ -1,7 +1,7 @@
 import React, { useState, useRef, useLayoutEffect } from "react";
 import { Link } from "react-router-dom";
 
-import "./header.scss";
+// import "./_header.scss";
 
 const Header = ({ setImgUrl }) => {
   const [toggle, setToggle] = useState("closed");

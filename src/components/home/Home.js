@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./Home.scss";
+// import "./_home.scss";
 
 const Home = () => {
   return (

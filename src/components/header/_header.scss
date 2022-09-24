@@ -117,6 +117,10 @@
       margin: 0;
     }
 
+    @include xl {
+      justify-content: space-between;
+    }
+
     &-links span {
       font-weight: 700;
 

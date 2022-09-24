@@ -1,0 +1,13 @@
+// @import "./scss/breakpoints";
+// @import "./scss/variable";
+
+@use "./components/App";
+@use "./components/header/header";
+
+@use "./components/home/home";
+
+@use "./components/crew/crew";
+
+@use "./components/destination/destination";
+
+@use "./components/technology/technology";

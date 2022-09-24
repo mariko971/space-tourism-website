@@ -1,6 +1,6 @@
 import React, { useState, useContext, useRef, useLayoutEffect } from "react";
 import { appContext } from "../App";
-import "./crew.scss";
+// import "./_crew.scss";
 
 const Crew = () => {
   const { crew } = useContext(appContext);
@@ -40,6 +40,7 @@ const Crew = () => {
         className="crew__img"
         style={{ backgroundImage: `url(${images.webp})` }}
       ></article>
+      <img src={images.webp} alt={name} id="crew-img" />
       <ul className="crew__nav">
         <li
           className="crew__nav-link"
@@ -64,9 +65,11 @@ const Crew = () => {
           ref={fourthRef}
         ></li>
       </ul>
-      <h1 className="crew__role">{role.toUpperCase()}</h1>
-      <h1 className="crew__name">{name.toUpperCase()}</h1>
-      <p className="crew__text">{bio}</p>
+      <article>
+        <h1 className="crew__role">{role.toUpperCase()}</h1>
+        <h1 className="crew__name">{name.toUpperCase()}</h1>
+        <p className="crew__text">{bio}</p>
+      </article>
     </section>
   );
 };

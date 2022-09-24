@@ -1,6 +1,6 @@
 import React, { useContext, useState, useLayoutEffect, useRef } from "react";
 import { appContext } from "../App";
-import "./technology.scss";
+// import "./_technology.scss";
 
 const Technology = () => {
   const { technology } = useContext(appContext);
@@ -39,34 +39,41 @@ const Technology = () => {
       <h3 className="technology__title">
         <span>03&nbsp;</span> SPACE LAUNCH 101
       </h3>
-      <img src={images.landscape} alt={name} className="technology__img" />
-      <ul className="technology__nav">
-        <li
-          className="technology__nav-link"
-          onClick={() => handleClick(0)}
-          ref={firstRef}
-        >
-          <p>1</p>
-        </li>
-        <li
-          className="technology__nav-link"
-          onClick={() => handleClick(1)}
-          ref={secondRef}
-        >
-          <p>2</p>
-        </li>
-        <li
-          className="technology__nav-link"
-          id="europa"
-          onClick={() => handleClick(2)}
-          ref={thirdRef}
-        >
-          <p>3</p>
-        </li>
-      </ul>
-      <h1 className="technology__role">THE TERMINOLOGY ...</h1>
-      <h1 className="technology__name">{name.toUpperCase()}</h1>
-      <p className="technology__text">{description}</p>
+      <picture>
+        <source srcSet={images.portrait} media="(min-width: 1200px)" />
+        <img src={images.landscape} alt={name} className="technology__img" />
+      </picture>
+      <article className="technology__article">
+        <ul className="technology__nav">
+          <li
+            className="technology__nav-link"
+            onClick={() => handleClick(0)}
+            ref={firstRef}
+          >
+            <p>1</p>
+          </li>
+          <li
+            className="technology__nav-link"
+            onClick={() => handleClick(1)}
+            ref={secondRef}
+          >
+            <p>2</p>
+          </li>
+          <li
+            className="technology__nav-link"
+            id="europa"
+            onClick={() => handleClick(2)}
+            ref={thirdRef}
+          >
+            <p>3</p>
+          </li>
+        </ul>
+        <article>
+          <h1 className="technology__role">THE TERMINOLOGY ...</h1>
+          <h1 className="technology__name">{name.toUpperCase()}</h1>
+          <p className="technology__text">{description}</p>
+        </article>
+      </article>
     </section>
   );
 };
