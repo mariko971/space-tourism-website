@@ -1,5 +1,5 @@
-@import "../../scss/variable.scss";
-@import "../../scss/breakpoints.scss";
+@import "../../variable.scss";
+@import "../../breakpoints.scss";
 
 .crew {
   color: #fff;
@@ -9,7 +9,7 @@
     margin-bottom: 229px;
   }
 
-  #crew-img {
+  #crew-img2 {
     display: none;
   }
 
@@ -32,8 +32,7 @@
       width: 489px;
       margin-left: 141px;
     }
-
-    #crew-img {
+    #crew-img2 {
       display: block;
       position: absolute;
       left: 834.93px;
@@ -76,21 +75,31 @@
 
   &__img {
     height: 223px;
+    max-width: 458px;
     margin-bottom: 32px;
     border-bottom: solid 1px $separator-color;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position-x: center;
+    display: flex;
+    justify-content: center;
+    margin-inline: auto;
 
     @include md {
       position: absolute;
       border-bottom: none;
-      width: 456.37px;
-      height: 572px;
-      left: 155.85px;
-      top: 465px;
+      min-width: 100vw;
+      height: 0.55 * 100vh;
+      left: 0;
+      bottom: 0;
       margin-bottom: 0;
       background-position: bottom;
+
+      #crew-img {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        height: 95%;
+        margin-top: auto;
+        transform: translateX(-50%);
+      }
     }
 
     @include xl {
@@ -121,8 +130,9 @@
     @include md {
       position: absolute;
       width: 88px;
-      left: 340px;
+      left: 50%;
       top: 442px;
+      transform: translateX(-50%);
     }
 
     @include xl {
@@ -130,6 +140,7 @@
       height: 15px;
       left: 167px;
       top: 791px;
+      transform: translateX(0);
     }
 
     &-link {
@@ -137,6 +148,7 @@
       width: 10px;
       background-color: #fff;
       opacity: 0.17;
+      cursor: pointer;
 
       @include xl {
         width: 15px;

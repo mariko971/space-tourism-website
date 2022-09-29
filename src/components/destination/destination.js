@@ -1,8 +1,6 @@
 import React, { useContext, useState, useRef, useLayoutEffect } from "react";
-import { appContext } from "../App";
+import { appContext } from "../../App";
 import { activeLink, inActiveLink } from "../../utils";
-
-// import "./_destination.scss";
 
 const Destination = () => {
   const { destinations } = useContext(appContext);

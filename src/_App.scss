@@ -1,23 +1,4 @@
-/* Box sizing */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-/* Reset margins */
-body,
-h1,
-h2,
-h3,
-h4,
-p {
-  margin: 0;
-}
-
-img {
-  height: 100%;
-}
+@import "./breakpoints";
 
 .app-container {
   padding: 24px;
@@ -27,6 +8,8 @@ img {
   overflow: hidden;
   isolation: isolate;
   position: relative;
+  max-width: 1600px;
+  margin-inline: auto;
 
   &__img {
     position: absolute;
@@ -36,5 +19,9 @@ img {
     height: 100%;
     width: 100%;
     z-index: -1;
+  }
+
+  @include xl {
+    min-height: 900px;
   }
 }

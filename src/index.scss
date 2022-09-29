@@ -1,7 +1,4 @@
-// @import "./scss/breakpoints";
-// @import "./scss/variable";
-
-@use "./components/App";
+@use "./App";
 @use "./components/header/header";
 
 @use "./components/home/home";
@@ -11,3 +8,28 @@
 @use "./components/destination/destination";
 
 @use "./components/technology/technology";
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+body {
+  background-color: #0b0d17;
+}
+
+img {
+  height: 100%;
+}

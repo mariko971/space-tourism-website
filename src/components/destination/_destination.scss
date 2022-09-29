@@ -1,5 +1,5 @@
-@import "../../scss/variable.scss";
-@import "../../scss/breakpoints.scss";
+@import "../../variable.scss";
+@import "../../breakpoints.scss";
 
 .destination {
   color: #fff;
@@ -91,6 +91,7 @@
 
     &-link {
       padding-bottom: 8px;
+      cursor: pointer;
 
       @include xl {
         padding-bottom: 12px;

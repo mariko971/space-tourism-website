@@ -1,6 +1,5 @@
 import React, { useState, useContext, useRef, useLayoutEffect } from "react";
-import { appContext } from "../App";
-// import "./_crew.scss";
+import { appContext } from "../../App";
 
 const Crew = () => {
   const { crew } = useContext(appContext);
@@ -36,11 +35,10 @@ const Crew = () => {
       <h3 className="crew__title">
         <span>02&nbsp;</span> MEET YOUR CREW
       </h3>
-      <article
-        className="crew__img"
-        style={{ backgroundImage: `url(${images.webp})` }}
-      ></article>
-      <img src={images.webp} alt={name} id="crew-img" />
+      <article className="crew__img">
+        <img src={images.webp} alt={name} id="crew-img" />
+      </article>
+      <img src={images.webp} alt={name} id="crew-img2" />
       <ul className="crew__nav">
         <li
           className="crew__nav-link"

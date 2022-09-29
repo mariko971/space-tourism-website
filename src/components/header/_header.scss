@@ -1,5 +1,5 @@
-@import "../../scss/variable.scss";
-@import "../../scss/breakpoints.scss";
+@import "../../variable.scss";
+@import "../../breakpoints.scss";
 
 .header__ {
   background-color: transparent;
@@ -88,14 +88,17 @@
   }
 
   .open {
+    display: initial;
     right: -24px;
   }
 
   .closed {
+    display: none;
     right: -300px;
 
     @include md {
       right: -24px;
+      display: initial;
     }
   }
 

@@ -1,5 +1,5 @@
-@import "../../scss/variable.scss";
-@import "../../scss/breakpoints.scss";
+@import "../../variable.scss";
+@import "../../breakpoints.scss";
 
 .technology {
   color: #fff;
@@ -108,6 +108,7 @@
       align-items: center;
       justify-content: center;
       font-family: $font-stack-2;
+      cursor: pointer;
 
       @include md {
         width: 60px;

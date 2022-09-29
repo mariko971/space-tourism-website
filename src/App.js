@@ -1,15 +1,13 @@
-import React, { createContext, useEffect, useState } from "react";
+import React, { createContext, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 
-import data from "../data.json";
-import Home from "./home/home";
-import Destination from "./destination/Destination";
-import Crew from "./crew/crew";
-import Technology from "./technology/technology";
-import { pagesBg } from "../backgrounds";
-import Header from "./header/Header";
-
-// import "./_App.scss";
+import data from "./data.json";
+import Home from "./components/home/home";
+import Destination from "./components/destination/destination";
+import Crew from "./components/crew/crew";
+import Technology from "./components/technology/technology";
+import { pagesBg } from "./backgrounds";
+import Header from "./components/header/header";
 
 export const appContext = createContext(data);
 
@@ -23,7 +21,6 @@ const App = () => {
         <picture>
           <source srcSet={desktop} media="(min-width: 769px)" />
           <source srcSet={tablet} media="(min-width: 376px)" />
-          {/* <source srcSet={mobile}  /> */}
           <img src={mobile} alt="background" className="app-container__img" />
         </picture>
         <Header setImgUrl={setImgUrl} />
