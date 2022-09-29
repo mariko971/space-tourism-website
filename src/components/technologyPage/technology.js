@@ -1,6 +1,5 @@
 import React, { useContext, useState, useLayoutEffect, useRef } from "react";
 import { appContext } from "../../App";
-// import "./_technology.scss";
 
 const Technology = () => {
   const { technology } = useContext(appContext);

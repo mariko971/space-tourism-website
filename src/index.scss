@@ -1,13 +1,13 @@
 @use "./App";
-@use "./components/header/header";
+@use "./components/pageHeader/header";
 
-@use "./components/home/home";
+@use "./components/homePage/home";
 
-@use "./components/crew/crew";
+@use "./components/crewPage/crew";
 
-@use "./components/destination/destination";
+@use "./components/destinationPage/destination";
 
-@use "./components/technology/technology";
+@use "./components/technologyPage/technology";
 
 /* Box sizing */
 *,

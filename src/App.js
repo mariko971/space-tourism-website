@@ -2,12 +2,12 @@ import React, { createContext, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 
 import data from "./data.json";
-import Home from "./components/home/home";
-import Destination from "./components/destination/destination";
-import Crew from "./components/crew/crew";
-import Technology from "./components/technology/technology";
+import Home from "./components/homePage/home";
+import Destination from "./components/destinationPage/destination";
+import Crew from "./components/crewPage/crew";
+import Technology from "./components/technologyPage/technology";
 import { pagesBg } from "./backgrounds";
-import Header from "./components/header/header";
+import Header from "./components/pageHeader/header";
 
 export const appContext = createContext(data);
 
