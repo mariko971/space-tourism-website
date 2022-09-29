@@ -1,8 +1,6 @@
 import React, { useState, useRef, useLayoutEffect } from "react";
 import { Link } from "react-router-dom";
 
-// import "./_header.scss";
-
 const Header = ({ setImgUrl }) => {
   const [toggle, setToggle] = useState("closed");
 
@@ -29,10 +27,14 @@ const Header = ({ setImgUrl }) => {
 
   return (
     <header className="header__">
-      <img src="/assets/shared/logo.svg" alt="logo" className="header__logo" />
+      <img
+        src="/assets/shared-assets/logo.svg"
+        alt="logo"
+        className="header__logo"
+      />
       <nav className={`navigation ${toggle}`}>
         <img
-          src="/assets/shared/icon-close.svg"
+          src="/assets/shared-assets/icon-close.svg"
           alt="close menu"
           className="header__menu-close"
           onClick={() => setToggle("closed")}
@@ -77,7 +79,7 @@ const Header = ({ setImgUrl }) => {
         </ul>
       </nav>
       <img
-        src="/assets/shared/icon-hamburger.svg"
+        src="/assets/shared-assets/icon-hamburger.svg"
         alt="menu"
         className="header__menu"
         onClick={() => setToggle("open")}
